@@ -122,17 +122,18 @@ class _ExpandChildState extends State<ExpandChild>
   Widget _buildChild(BuildContext context, Widget child) {
     return Column(
       mainAxisSize: MainAxisSize.min,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         ClipRect(
           child: Align(
-            alignment: Alignment.topCenter,
+            alignment: Alignment.topLeft,
             heightFactor: _heightFactor.value,
             child: child,
           ),
         ),
         ClipRect(
           child: Align(
-            alignment: Alignment.topCenter,
+            alignment: Alignment.topLeft,
             heightFactor:
                 widget.hideArrowOnExpanded ? 1 - _heightFactor.value : 1,
             child: InkWell(

@@ -133,7 +133,7 @@ class _ExpandChildState extends State<ExpandChild>
         ),
         ClipRect(
           child: Align(
-            alignment: Alignment.topLeft,
+            alignment: Alignment.topCenter,
             heightFactor:
                 widget.hideArrowOnExpanded ? 1 - _heightFactor.value : 1,
             child: InkWell(
